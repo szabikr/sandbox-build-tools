@@ -1,0 +1,30 @@
+{
+  "name": "babel-plugins",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "szabikr",
+  "license": "MIT",
+  "scripts": {
+    "compile:basic": "babel src --out-dir lib",
+    "compile:all": "babel src --out-dir lib --presets=babel-preset-szabi-space",
+    "compile:arrow-functions": "babel src/arrow-functions.js --out-file lib/arrow-functions.js --plugins=@babel/plugin-transform-arrow-functions",
+    "compile:classes": "babel src/classes.js --out-file lib/classes.js --plugins=@babel/plugin-transform-classes",
+    "compile:spread": "babel src/spread.js --out-file lib/spread.js --plugins=@babel/plugin-transform-spread",
+    "compile:template-literals": "babel src/template-literals.js --out-file lib/template-literals.js --plugins=@babel/plugin-transform-template-literals",
+    "compile:destructuring": "babel src/destructuring.js --out-file lib/destructuring.js --plugins=@babel/plugin-transform-destructuring",
+    "compile:nullish-coalescing": "babel src/nullish-coalescing.js --out-file lib/nullish-coalescing.js --plugins=@babel/plugin-proposal-nullish-coalescing-operator",
+    "cleanup": "rm -rf lib"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
+    "@babel/plugin-transform-arrow-functions": "^7.18.6",
+    "@babel/plugin-transform-classes": "^7.20.2",
+    "@babel/plugin-transform-destructuring": "^7.20.2",
+    "@babel/plugin-transform-spread": "^7.19.0",
+    "@babel/plugin-transform-template-literals": "^7.18.9",
+    "babel-preset-szabi-space": "^1.0.1",
+    "prettier": "^2.7.1"
+  }
+}
